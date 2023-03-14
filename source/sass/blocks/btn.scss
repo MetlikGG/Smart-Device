@@ -2,11 +2,21 @@
   display: inline-flex;
   padding: 10px 20px;
 
+  font-family: $ff-roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
   color: $color-default-white;
 
   background-color: $color-neon-blue;
   border: none;
   cursor: pointer;
+  user-select: none;
 
   transition: opacity $trans-default;
 
@@ -22,5 +32,23 @@
 
   @include hover-focus {
     opacity: 0.8;
+    outline: 1px solid $color-alice-blue;
+  }
+
+  &--header {
+    padding: 10px 15px;
+    border: 1px solid $color-alice-blue;
+    border-radius: 3px;
+    color: $color-alice-blue;
+    background-color: $color-transparent;
+    min-height: 40px;
+    min-width: 160px;
+    max-width: 250px;
+
+    @include hover-focus {
+      border-color: $color-deep-sky-blue;
+      color: $color-deep-sky-blue;
+      outline: none;
+    }
   }
 }

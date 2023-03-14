@@ -35,8 +35,23 @@ body {
 }
 
 a {
+  display: block;
   color: $color-default-black;
   text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
 }
 
 img,
