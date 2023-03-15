@@ -663,7 +663,7 @@ button,
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #f2f5f6;
   background-color: #2c39f2;
   border: none;
   cursor: pointer;
@@ -707,6 +707,20 @@ button,
   outline: none;
 }
 
+.btn--hero {
+  width: 410px;
+  min-height: 55px;
+  padding: 15px 25px;
+  background-color: #00b2ff;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -735,10 +749,6 @@ button,
   padding-bottom: 35px;
 }
 
-.header__wrapper img {
-  min-width: 215px;
-}
-
 .header__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -748,7 +758,7 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  max-width: 550px;
+  max-width: 480px;
 }
 
 .header__item {
@@ -782,6 +792,54 @@ button,
 
 .header__link-text {
   margin-left: 15px;
+}
+
+.hero-block {
+  color: #ffffff;
+  background-color: #0a446c;
+  background-image: url("../img/main-block.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-block__wrapper {
+  padding-top: 305px;
+  padding-bottom: 280px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0)));
+  background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
+  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
+}
+
+.hero-block__inner {
+  margin-left: 125px;
+}
+
+.hero-block__inner h2 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  color: #f2f5f6;
+  text-transform: uppercase;
+}
+
+.hero-block__inner p {
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+  color: #f2f5f6;
+  max-width: 685px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.hero-block__button-mobile {
+  display: none;
 }
 
 .modal {
@@ -1457,6 +1515,10 @@ button,
     padding: 0 24px;
   }
 
+  .header {
+    position: absolute;
+  }
+
   .header__wrapper {
     padding-top: 20px;
     padding-bottom: 25px;
@@ -1482,11 +1544,41 @@ button,
   .header__button {
     display: none;
   }
+
+  .hero-block {
+    background-position: 20% 50%;
+  }
+
+  .hero-block__wrapper {
+    padding-top: 180px;
+    padding-bottom: 205px;
+  }
+
+  .hero-block__inner {
+    margin-left: 0;
+  }
+
+  .hero-block__inner h2 {
+    font-size: 64px;
+    line-height: 75px;
+  }
 }
 
 @media (max-width: 767px) {
   .container {
     padding: 0 16px;
+  }
+
+  .btn--hero {
+    padding: 12px 38px;
+    min-width: 270px;
+    width: 100%;
+    min-height: 40px;
+    font-size: 14px;
+    line-height: 16px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   .header__wrapper {
@@ -1495,7 +1587,6 @@ button,
   }
 
   .header__wrapper img {
-    min-width: 35px;
     width: 35px;
     height: 35px;
   }
@@ -1506,6 +1597,35 @@ button,
 
   .header__item {
     margin-bottom: 0;
+  }
+
+  .hero-block {
+    background-position: 25% 50%;
+  }
+
+  .hero-block__wrapper {
+    padding-top: 150px;
+    padding-bottom: 190px;
+  }
+
+  .hero-block__inner h2 {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .hero-block__inner p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 45px;
+  }
+
+  .hero-block__button-mobile {
+    display: block;
+  }
+
+  .hero-block__button-tablet {
+    display: none;
   }
 
   .modal__wrapper {
@@ -1603,5 +1723,11 @@ button,
 
   .custom-select__item:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .hero-block {
+    background-image: url("../img/main-block@2x.jpg");
   }
 }
