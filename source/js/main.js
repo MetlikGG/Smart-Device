@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
+import {removeNojsClass, footerNav, footerContacts} from './modules/modals/accordion';
 
 // ---------------------------------
 
@@ -10,6 +11,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  removeNojsClass(footerNav);
+  removeNojsClass(footerContacts);
 
   // Modules
   // ---------------------------------
@@ -18,6 +21,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+    removeNojsClass(footerNav);
+    removeNojsClass(footerContacts);
     const form = new Form();
     window.form = form;
     form.init();

@@ -1,0 +1,137 @@
+.about {
+  background: $color-alice-blue-background;
+  color: $color-black-pearl;
+  padding-bottom: 120px;
+
+  @include vp-1023 {
+    padding-bottom: 80px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 75px;
+  }
+}
+
+.about__wrapper {
+  margin-left: 250px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 320px;
+    top: 0;
+    left: 20px;
+    background-image: url("../img/year.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @include retina {
+      background-image: url("../img/year@2x.png");
+    }
+
+    @include vp-1023 {
+      top: 5px;
+      left: 45px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  @include vp-1023 {
+    margin-left: 175px;
+  }
+
+  @include vp-767 {
+    margin-left: 0;
+  }
+}
+
+.about__wrapper h2 {
+  font-family: $ff-roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.about__inner {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  max-height: 150px;
+  overflow: hidden;
+
+  @include vp-1023 {
+    max-height: 260px;
+  }
+
+  @include vp-767 {
+    max-height: 210px;
+  }
+}
+
+.about--more .about__inner {
+  max-height: 100%;
+  overflow: visible;
+}
+
+.about__inner p {
+  font-family: $ff-mono;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include vp-1023 {
+    margin-bottom: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.about__btn {
+  margin-top: 20px;
+  padding: 12px 50px;
+  border: 1px solid $color-deep-sky-blue;
+  color: $color-deep-sky-blue;
+  text-decoration: none;
+
+  @include vp-1023 {
+    margin-top: 0;
+    padding: 13px 50px;
+  }
+
+  @include vp-767 {
+    padding: 8px 40px;
+  }
+}
+
+.about__btn-collapse {
+  display: none;
+}
+
+.about--more .about__btn-collapse {
+  display: block;
+}
+
+.about--more .about__btn-more {
+  display: none;
+}
