@@ -429,6 +429,7 @@ html {
   line-height: 24px;
   font-family: "Placeholder", "Arial", sans-serif;
   color: #000000;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -909,6 +910,74 @@ button,
   color: #ffffff;
 }
 
+.feedback {
+  position: relative;
+  width: 100%;
+  color: #ffffff;
+  background-color: #00b2ff;
+  min-width: 320px;
+  z-index: 1;
+}
+
+.feedback::after {
+  content: "";
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, rgba(4, 24, 39, 0.5)), color-stop(50%, #00b2ff), to(#00b2ff));
+  background: -o-linear-gradient(left top, rgba(4, 24, 39, 0.5) 50%, #00b2ff 50%, #00b2ff 100%);
+  background: linear-gradient(to right bottom, rgba(4, 24, 39, 0.5) 50%, #00b2ff 50%, #00b2ff 100%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 50%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.feedback__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 165px 40px 250px;
+  max-width: 1280px;
+}
+
+.feedback__image-wrapper {
+  padding: 15px 15px 0 0;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  margin-right: 20px;
+}
+
+.feedback__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-left: auto;
+}
+
+.feedback__title {
+  margin: 0 0 12px;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+}
+
+.feedback__description {
+  margin: 0 0 34px;
+  font-family: "PT Mono", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+}
+
 .footer-nav__title {
   margin: 0 0 22px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -962,14 +1031,14 @@ button,
   color: rgba(255, 255, 255, 0.7);
 }
 
-.footer-nav__link:focus {
-  color: #ffffff;
-  outline: 1px solid #00b2ff;
-  border-radius: 2px;
+.footer-nav__link.focus-visible:focus {
+  color: #00b2ff;
 }
 
-.footer-nav__link:hover {
-  color: #ffffff;
+.footer-nav__link.focus-visible:focus {
+  color: #00b2ff;
+  outline: 1px solid #00b2ff;
+  border-radius: 2px;
 }
 
 .footer {
@@ -1273,8 +1342,13 @@ button,
   cursor: pointer;
 }
 
-.header__link:hover {
-  color: #00b2ff;
+.header__link.focus-visible:focus {
+  outline: 1px solid #00b2ff;
+  border-radius: 2px;
+}
+
+.header__link.focus-visible:active {
+  opacity: 0.8;
 }
 
 .header__link-text {
@@ -2228,6 +2302,31 @@ button,
     margin-bottom: 5px;
   }
 
+  .feedback::after {
+    width: 0;
+    height: 0;
+  }
+
+  .feedback__wrapper {
+    padding: 45px 50px 124px;
+  }
+
+  .feedback__image-wrapper {
+    display: none;
+  }
+
+  .feedback__content {
+    margin: 0 auto;
+  }
+
+  .feedback__title {
+    margin: 0 0 8px;
+  }
+
+  .feedback__description {
+    margin: 0 0 23px;
+  }
+
   .footer-nav__nav .footer-nav__list {
     grid-auto-flow: row;
   }
@@ -2419,7 +2518,7 @@ button,
 
 @media (max-width: 767px) {
   .container {
-    padding: 0 16px;
+    padding: 0 24px;
   }
 
   .about {
@@ -2529,6 +2628,21 @@ button,
   .contacts__phone {
     font-size: 14px;
     line-height: 25px;
+  }
+
+  .feedback__wrapper {
+    padding: 48px 25px 83px;
+  }
+
+  .feedback__title {
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  .feedback__description {
+    margin: 0 0 32px;
+    font-size: 14px;
+    line-height: 19px;
   }
 
   .footer-nav__title {
@@ -2902,6 +3016,16 @@ button,
     outline: none;
   }
 
+  .footer-nav__link:hover:not(.focus-visible) {
+    color: #00b2ff;
+  }
+
+  .footer-nav__link:hover:not(.focus-visible) {
+    color: #00b2ff;
+    outline: 1px solid #00b2ff;
+    border-radius: 2px;
+  }
+
   .form input:hover:not(.focus-visible),
   .form textarea:hover:not(.focus-visible) {
     outline: 1px solid #ffffff;
@@ -2909,6 +3033,10 @@ button,
 
   .form button:hover:not(.focus-visible) {
     outline: 1px solid #ffffff;
+  }
+
+  .header__link:hover:not(.focus-visible) {
+    color: #00b2ff;
   }
 
   .modal__close-btn:hover:not(.focus-visible) {

@@ -63,8 +63,6 @@
   }
 }
 
-
-
 .footer-nav__item {
   width: 220px;
   font-family: $ff-mono;
@@ -94,13 +92,26 @@
   line-height: 22px;
   color: rgba(255, 255, 255, 0.7);
 
-  &:focus {
-    color: $color-default-white;
-    outline: 1px solid $color-deep-sky-blue;
-    border-radius: 2px;
+  @include hover-focus {
+    color: $color-deep-sky-blue;
+    & {
+      color: $color-deep-sky-blue;
+      outline: 1px solid $color-deep-sky-blue;
+      border-radius: 2px;
+    }
   }
 
-  &:hover {
-    color: $color-default-white;
-  }
+  // &:focus {
+    // color: $color-deep-sky-blue;
+    // outline: 1px solid $color-deep-sky-blue;
+    // border-radius: 2px;
+  // }
+
+  // &:hover {
+  //   color: $color-deep-sky-blue;
+  // }
+
+  // &:active {
+  //   opacity: 0.8;
+  // }
 }

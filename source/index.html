@@ -24,7 +24,7 @@
         </a>
         <ul class="header__list">
           <li class="header__item">
-            <a class="header__link">
+            <a class="header__link" href="mailto:info@sd.ru">
               <svg class="header__icon" role="img" aria-label="Почта" width="21" height="20">
                 <use xlink:href="img/sprite.svg#email"></use>
               </svg>
@@ -32,7 +32,7 @@
             </a>
           </li>
           <li class="header__item">
-            <a class="header__link">
+            <a class="header__link" href="tel:+74950005252">
               <svg class="header__icon" role="img" aria-label="Телефон" width="21" height="20">
                 <use xlink:href="img/sprite.svg#phone-call"></use>
               </svg>
@@ -52,7 +52,7 @@
             <div class="hero-block__inner">
               <h2>Печатные платы</h2>
               <p>производство и&nbsp;монтаж, поставка комплектующих, блокови&nbsp;модулей</p>
-              <a class="hero-block__button btn btn--hero" href="index.html#feedback">
+              <a class="hero-block__button btn btn--hero" href="#form">
                 <span class="hero-block__button-tablet">Получить бесплатную консультацию</span>
                 <span class="hero-block__button-mobile">Бесплатная консультация</span>
               </a>
@@ -181,6 +181,43 @@
         </div>
       </section>
 
+      <section class="feedback" id="form">
+        <div class="feedback__wrapper container">
+          <div class="feedback__image-wrapper">
+            <picture>
+              <source type="image/webp" srcset="./img/paper_airplane.webp, ./img/paper_airplane@2x.webp 2x">
+              <img class="feedback__image" src="./img/paper_airplane.png" srcset="./img/paper_airplane@2x.png 2x" alt="Бумажный самолет" width="510" height="285">
+            </picture>
+          </div>
+          <div class="feedback__content">
+            <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
+            <p class="feedback__description">Мы проконсультируем Вас бесплатно</p>
+            <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="post" data-form>
+              <label for="name">
+                <input type="text" placeholder="Имя" name="name" id="name" minlength="1" required>
+              </label>
+
+              <label for="phone" data-tel-label>
+                <input type="tel" placeholder="Телефон" name="phone" id="phone" maxlength="20" required data-tel-input>
+              </label>
+
+              <label for="question" data-textarea>
+                <textarea placeholder="Ваш вопрос" name="question" id="question"></textarea>
+              </label>
+
+              <label for="personal-data">
+                <input type="checkbox" name="personal-data" id="personal-data" required checked>
+                <span></span>
+                <span>Я согласен на обработку  персональных данных</span>
+              </label>
+
+              <button type="submit" data-form-button>Задать вопрос</button>
+
+            </form>
+          </div>
+        </div>
+      </section>
+
     </main>
     <footer class="footer">
       <div class="footer__wrapper container">
@@ -279,13 +316,7 @@
       </div>
     </footer>
   </div>
-  <div class="container">
-    <h1>Тестовая страница.</h1>
-    <p>На данной странице показан пример модальных окон.Или не всё</p>
-    <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-    <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-    <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
-  </div>
+
   <!-- Модалки -->
   <div class="modal modal--preload" data-modal="feedback">
     <div class="modal__wrapper">
