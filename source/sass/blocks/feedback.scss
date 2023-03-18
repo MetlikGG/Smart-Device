@@ -29,7 +29,7 @@
 .feedback__wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 165px 40px 250px;
+  padding: 165px 31px 250px;
   max-width: 1280px;
 
   @include vp-1023 {
@@ -42,7 +42,7 @@
 }
 
 .feedback__image-wrapper {
-  padding: 15px 15px 0 0;
+  padding: 15px 0 0 0;
   align-self: center;
   margin-right: 20px;
 
@@ -54,7 +54,7 @@
 .feedback__content {
   display: flex;
   flex-direction: column;
-  margin-left: auto;
+  margin-right: 11px;
 
   @include vp-1023 {
     margin: 0 auto;
