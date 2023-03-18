@@ -36,7 +36,12 @@
     width: 35px;
     height: 35px;
   }
+
+  @include hover {
+    opacity: 0.5;
+  }
 }
+
 
 .header__list {
   display: flex;
@@ -54,7 +59,7 @@
 }
 
 .header__item {
-  margin-right: 93px;
+  margin-right: 120px;
   margin-bottom: 5px;
 
   &:last-child {
@@ -88,6 +93,7 @@
 }
 
 .header__link {
+
   @include hover {
     color: $color-deep-sky-blue;
   }

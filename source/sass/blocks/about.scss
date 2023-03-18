@@ -1,14 +1,14 @@
 .about {
   background: $color-alice-blue-background;
   color: $color-black-pearl;
-  padding-bottom: 120px;
+  padding-bottom: 118px;
 
   @include vp-1023 {
-    padding-bottom: 80px;
+    padding-bottom: 79px;
   }
 
   @include vp-767 {
-    padding-bottom: 75px;
+    padding-bottom: 76px;
   }
 }
 
@@ -21,18 +21,23 @@
     width: 150px;
     height: 320px;
     top: 0;
-    left: 20px;
-    background-image: url("../img/year.png");
+    left: 50px;
+    background-image: image-set(
+      url("../img/year.webp") 1x,
+      url("../img/year.png") 1x);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
 
     @include retina {
-      background-image: url("../img/year@2x.png");
+      background-image: image-set(
+        url("../img/year@2x.webp") 1x,
+        url("../img/year@2x.png") 1x);
     }
 
     @include vp-1023 {
-      top: 5px;
+
+      top: 12px;
       left: 45px;
     }
 
@@ -43,6 +48,7 @@
 
   @include vp-1023 {
     margin-left: 175px;
+    padding: 10px 0 0;
   }
 
   @include vp-767 {
@@ -72,11 +78,13 @@
   overflow: hidden;
 
   @include vp-1023 {
+    margin-top: 9px;
     max-height: 260px;
   }
 
   @include vp-767 {
     max-height: 210px;
+    margin-top: 12px;
   }
 }
 
@@ -91,7 +99,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 
   &:last-child {
     margin-bottom: 0;
@@ -104,23 +112,6 @@
   @include vp-767 {
     font-size: 14px;
     line-height: 19px;
-  }
-}
-
-.about__btn {
-  margin-top: 20px;
-  padding: 12px 50px;
-  border: 1px solid $color-deep-sky-blue;
-  color: $color-deep-sky-blue;
-  text-decoration: none;
-
-  @include vp-1023 {
-    margin-top: 0;
-    padding: 13px 50px;
-  }
-
-  @include vp-767 {
-    padding: 8px 40px;
   }
 }
 

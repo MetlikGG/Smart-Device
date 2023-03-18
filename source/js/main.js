@@ -6,7 +6,16 @@ import {removeNojsClass, footerNav, footerContacts} from './modules/modals/accor
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
-
+  const more = document.querySelector('[data-validate="btn-more"]');
+  const about = document.querySelector('[data-validate="about"]');
+  more.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    if (about.classList.contains('about--more')) {
+      about.classList.remove('about--more');
+    } else {
+      about.classList.add('about--more');
+    }
+  });
   // Utils
   // ---------------------------------
 
