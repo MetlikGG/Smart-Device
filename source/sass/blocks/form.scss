@@ -134,10 +134,6 @@
   clip-path: inset(100%);
 }
 
-// .form label input[type="checkbox"] + span {
-//   position: relative;
-// }
-
 .form label input[type="checkbox"] + span::after {
   content: "";
   position: absolute;
