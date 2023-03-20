@@ -45,6 +45,14 @@
     outline: none;
     box-shadow: 2px -2px 5px $color-black-pearl;
   }
+
+  @include active {
+    background-color: rgba($color-black-pearl, 0.5);
+  }
+
+  &:focus-within {
+    background-color: rgba($color-black-pearl, 0.5);
+  }
 }
 
 .form input + span {
@@ -97,6 +105,7 @@
   border: none;
   box-sizing: border-box;
   grid-area: 3 / 1 / 4 /2;
+  cursor: pointer;
 
   @include hover-focus {
     outline: 1px solid $color-default-white;
@@ -144,6 +153,7 @@
   background-color: $color-transparent;
   border: 1px solid $color-default-white;
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .form label input[type="checkbox"]:focus + span::after {

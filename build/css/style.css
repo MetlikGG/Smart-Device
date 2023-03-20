@@ -1090,6 +1090,16 @@ button,
   box-shadow: 2px -2px 5px #041827;
 }
 
+.form input.focus-visible:active,
+.form textarea.focus-visible:active {
+  background-color: rgba(4, 24, 39, 0.5);
+}
+
+.form input:focus-within,
+.form textarea:focus-within {
+  background-color: rgba(4, 24, 39, 0.5);
+}
+
 .form input + span {
   color: #ff1553;
 }
@@ -1158,6 +1168,7 @@ button,
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-area: 3/1/4/2;
+  cursor: pointer;
 }
 
 .form button.focus-visible:focus {
@@ -1196,6 +1207,7 @@ button,
   background-color: rgba(255, 255, 255, 0);
   border: 1px solid #ffffff;
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .form label input[type=checkbox]:focus + span::after {
@@ -1541,8 +1553,9 @@ button,
 .services__item {
   position: relative;
   min-height: 650px;
-  background-color: #041827;
-  background-image: url("../img/main-block.jpg");
+  background-color: #0a446c;
+  background-image: -webkit-image-set(url("../img/main-block.webp") 1x, url("../img/main-block.jpg") 1x);
+  background-image: image-set(url("../img/main-block.webp") 1x, url("../img/main-block.jpg") 1x);
   background-size: 1500px 650px;
   background-repeat: no-repeat;
   -o-object-fit: cover;
@@ -2392,7 +2405,8 @@ button,
   }
 
   .services__item {
-    background-image: url("../img/main-block@2x.jpg");
+    background-image: -webkit-image-set(url("../img/main-block@2x.webp") 1x, url("../img/main-block@2x.jpg") 1x);
+    background-image: image-set(url("../img/main-block@2x.webp") 1x, url("../img/main-block@2x.jpg") 1x);
   }
 }
 

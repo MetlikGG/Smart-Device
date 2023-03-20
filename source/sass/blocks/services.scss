@@ -64,8 +64,10 @@
 .services__item {
   position: relative;
   min-height: 650px;
-  background-color: $color-black-pearl;
-  background-image: url("../img/main-block.jpg");
+  background-color: $color-dark-cerulean;
+  background-image: image-set(
+    url("../img/main-block.webp") 1x,
+    url("../img/main-block.jpg") 1x);
   background-size: 1500px 650px;
   background-repeat: no-repeat;
   object-fit: cover;
@@ -85,7 +87,9 @@
   }
 
   @include retina {
-    background-image: url("../img/main-block@2x.jpg");
+    background-image: image-set(
+      url("../img/main-block@2x.webp") 1x,
+      url("../img/main-block@2x.jpg") 1x);
   }
 
   &::after {
