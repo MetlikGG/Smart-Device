@@ -1786,6 +1786,10 @@ button,
 */
 
 @media (max-width: 1279px) {
+  .btn--header {
+    margin-right: 0;
+  }
+
   .footer__footer-nav {
     margin: 0 40px;
   }

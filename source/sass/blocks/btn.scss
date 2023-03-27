@@ -50,6 +50,10 @@
       color: $color-deep-sky-blue;
       outline: none;
     }
+
+    @include vp-1279 {
+      margin-right: 0;
+    }
   }
 
   &--hero {
