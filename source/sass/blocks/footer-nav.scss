@@ -34,7 +34,7 @@
 }
 
 .footer-nav__nav .footer-nav__list {
-  grid-auto-flow: column;
+  grid-auto-flow: row;
   grid-template-rows: repeat(4, auto);
 
   @include vp-1023 {
@@ -82,5 +82,14 @@
 
   @include hover {
     color: $color-deep-sky-blue;
+  }
+
+  @include focus {
+    outline: 1px solid $color-deep-sky-blue;
+    border-radius: 2px;
+  }
+
+  @include active {
+    opacity: 0.8;
   }
 }

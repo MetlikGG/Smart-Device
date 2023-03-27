@@ -65,6 +65,19 @@
   font-size: 16px;
   line-height: 22px;
   color: rgba(255, 255, 255, 0.7);
+
+  @include hover {
+    color: $color-deep-sky-blue;
+  }
+
+  @include focus {
+    outline: 1px solid $color-deep-sky-blue;
+    border-radius: 2px;
+  }
+
+  @include active {
+    opacity: 0.8;
+  }
 }
 
 .contacts__address {

@@ -185,6 +185,7 @@
   bottom: 0;
   z-index: 1;
   padding: 50px 40px;
+  overflow: auto;
 
   @include vp-1023 {
     padding: 38px 45px;
@@ -201,6 +202,10 @@
   font-size: 20px;
   line-height: 30px;
   width: 151px;
+
+  @include vp-1023 {
+    width: 150px;
+  }
 
   @include vp-767 {
     font-size: 18px;

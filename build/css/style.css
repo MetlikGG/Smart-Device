@@ -814,8 +814,7 @@ button,
 }
 
 .btn.focus-visible:focus {
-  opacity: 0.8;
-  outline: 1px solid #f2f5f6;
+  outline: 2px solid #00b2ff;
 }
 
 .btn--header {
@@ -832,7 +831,7 @@ button,
   align-items: center;
 }
 
-.btn--header.focus-visible:focus {
+.btn--header:hover {
   border-color: #00b2ff;
   color: #00b2ff;
   outline: none;
@@ -903,6 +902,17 @@ button,
   font-size: 16px;
   line-height: 22px;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.contacts__address.focus-visible:focus,
+.contacts__phone.focus-visible:focus {
+  outline: 1px solid #00b2ff;
+  border-radius: 2px;
+}
+
+.contacts__address.focus-visible:active,
+.contacts__phone.focus-visible:active {
+  opacity: 0.8;
 }
 
 .feedback {
@@ -989,7 +999,7 @@ button,
 }
 
 .footer-nav__nav .footer-nav__list {
-  grid-auto-flow: column;
+  grid-auto-flow: row;
   -ms-grid-rows: (auto)[4];
   grid-template-rows: repeat(4, auto);
 }
@@ -1024,6 +1034,15 @@ button,
   font-size: 16px;
   line-height: 22px;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-nav__link.focus-visible:focus {
+  outline: 1px solid #00b2ff;
+  border-radius: 2px;
+}
+
+.footer-nav__link.focus-visible:active {
+  opacity: 0.8;
 }
 
 .footer {
@@ -1072,6 +1091,16 @@ button,
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: end;
+}
+
+.form .input-message {
+  bottom: -19px;
+  position: absolute;
+  left: 0;
+}
+
+.form .input-message.is-invalid {
+  color: #ff1553;
 }
 
 .form label {
@@ -1252,13 +1281,21 @@ button,
 .form--popap {
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  gap: 15px;
+  gap: 20px;
+}
+
+.form--popap label input[type=checkbox] + span::after {
+  left: 9px;
 }
 
 .form--popap label input[type=checkbox]:checked + span::before {
   content: "";
   top: 40%;
-  left: 3px;
+  left: 11px;
+}
+
+.form--popap label input[type=checkbox] ~ span:nth-of-type(2n) {
+  padding-left: 33px;
 }
 
 .form--popap button {
@@ -1266,6 +1303,8 @@ button,
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   grid-area: 4/1/5/-1;
+  margin-top: -3px;
+  margin-bottom: -6px;
 }
 
 .form--popap .form__textarea-wrapper {
@@ -1483,7 +1522,7 @@ button,
   align-items: center;
   width: 100%;
   min-height: 100%;
-  padding: 60px 40px;
+  padding-top: 146px;
 }
 
 .modal__overlay {
@@ -1497,6 +1536,7 @@ button,
 
 .modal__content {
   position: relative;
+  margin-left: -14px;
   width: 500px;
   min-height: 610px;
   padding: 38px 40px 40px 40px;
@@ -1650,6 +1690,7 @@ button,
   bottom: 0;
   z-index: 1;
   padding: 50px 40px;
+  overflow: auto;
 }
 
 .services__link h3 {
@@ -1745,10 +1786,6 @@ button,
 */
 
 @media (max-width: 1279px) {
-  .btn--header {
-    margin-right: 0;
-  }
-
   .footer__footer-nav {
     margin: 0 40px;
   }
@@ -1807,8 +1844,13 @@ button,
     padding: 38px 32px 30px 36px;
   }
 
-  .features__item {
-    min-height: 360px;
+  .features__item:nth-child(n+3) {
+    min-height: 327px;
+  }
+
+  .features__item:nth-child(n+3) h3 {
+    margin-top: 13px;
+    margin-bottom: 13px;
   }
 
   .features__item h3 {
@@ -1900,6 +1942,14 @@ button,
     padding: 28px 16px;
   }
 
+  .form label input[type=checkbox] + span::after {
+    left: 0;
+  }
+
+  .form label input[type=checkbox]:checked + span::before {
+    left: 1%;
+  }
+
   .form label input[type=checkbox] ~ span:nth-of-type(2n) {
     padding-left: 24px;
     max-width: 355px;
@@ -1921,7 +1971,6 @@ button,
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-right: 20px;
     max-width: 400px;
     width: auto;
   }
@@ -2003,6 +2052,10 @@ button,
     padding: 38px 45px;
   }
 
+  .services__link h3 {
+    width: 150px;
+  }
+
   .social {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2017,6 +2070,7 @@ button,
 
   .social__list {
     padding: 5px 0 0;
+    width: 150px;
   }
 
   .social__item:last-child {
@@ -2066,12 +2120,13 @@ button,
 
   .features {
     padding-top: 50px;
-    padding-bottom: 15px;
+    padding-bottom: 36px;
   }
 
   .features__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    gap: 29px 30px;
   }
 
   .features__item {
@@ -2244,6 +2299,15 @@ button,
     -ms-grid-row: 4;
     -ms-grid-row-span: 1;
     grid-area: 4/1/5/-1;
+  }
+
+  .form label input[type=checkbox] + span::after {
+    left: 5px;
+    top: 12px;
+  }
+
+  .form label input[type=checkbox]:checked + span::before {
+    left: 3%;
   }
 
   .form label input[type=checkbox] ~ span:nth-of-type(2n) {
@@ -2461,20 +2525,18 @@ button,
 
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
-    opacity: 0.8;
-    outline: 1px solid #f2f5f6;
-  }
-
-  .btn--header:hover:not(.focus-visible) {
-    border-color: #00b2ff;
-    color: #00b2ff;
-    outline: none;
+    outline: 2px solid #00b2ff;
   }
 
   .btn--about:hover:not(.focus-visible) {
     background-color: #00b2ff;
     outline: none;
     color: #ffffff;
+  }
+
+  .contacts__address:hover:not(.focus-visible),
+  .contacts__phone:hover:not(.focus-visible) {
+    color: #00b2ff;
   }
 
   .contacts__phone:hover:hover:not(.focus-visible) {

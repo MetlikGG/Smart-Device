@@ -10,7 +10,7 @@
 
   @include vp-767 {
     padding-top: 50px;
-    padding-bottom: 15px;
+    padding-bottom: 36px;
   }
 }
 
@@ -25,6 +25,7 @@
 
   @include vp-767 {
     grid-template-columns: 1fr;
+    gap: 29px 30px;
   }
 }
 
@@ -36,6 +37,15 @@
 
   @include vp-1023 {
     padding: 38px 32px 30px 36px;
+
+    &:nth-child(n+3) {
+      min-height: 327px;
+
+      & h3 {
+        margin-top: 13px;
+        margin-bottom: 13px;
+      }
+    }
   }
 
   &:hover {
@@ -50,10 +60,6 @@
   &:hover h3,
   &:hover p {
     color: $color-alice-blue;
-  }
-
-  @include vp-1023 {
-    min-height: 360px;
   }
 
   @include vp-767 {

@@ -31,8 +31,7 @@
   }
 
   @include hover-focus {
-    opacity: 0.8;
-    outline: 1px solid $color-alice-blue;
+    outline: 2px solid $color-deep-sky-blue;
   }
 
   &--header {
@@ -46,14 +45,10 @@
     max-width: 160px;
     align-items: center;
 
-    @include hover-focus {
+    &:hover {
       border-color: $color-deep-sky-blue;
       color: $color-deep-sky-blue;
       outline: none;
-    }
-
-    @include vp-1279 {
-      margin-right: 0;
     }
   }
 
