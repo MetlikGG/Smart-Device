@@ -15,13 +15,14 @@
   <link rel="manifest" href="./img/favicon/site.webmanifest">
   <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body>
   <div class="wrapper">
     <header class="header">
       <div class="header__wrapper container">
-        <a class="header__logo" href="#">
+        <a class="header__logo" href="index.html">
           <picture>
             <source media="(max-width: 767px)" srcset="img/logo/logo-mobile.svg">
             <img src="img/logo/logo-main.svg" width="215" height="55" alt="Логотип Smart Device">
@@ -195,8 +196,8 @@
             </picture>
           </div>
           <div class="feedback__content">
-            <h2 class="feedback__title">Остались вопросы? Задайте их нам!</h2>
-            <p class="feedback__description">Мы проконсультируем Вас бесплатно</p>
+            <h2 class="feedback__title">Остались вопросы? Задайте их&nbsp;нам!</h2>
+            <p class="feedback__description">Мы&nbsp;проконсультируем Вас бесплатно</p>
             <form action="https://echo.htmlacademy.ru/" method="post" data-form>
               <div class="feedback__form form">
                 <label for="name" data-validate-type="text" data-required data-message-base="Поле обязательно к заполнению">
@@ -213,10 +214,10 @@
                   </label>
                 </div>
 
-                <label for="personal-data">
+                <label for="personal-data" data-validate-type="checkbox" data-required data-message-base="Поле обязательно к заполнению">
                   <input type="checkbox" name="personal-data" id="personal-data" required checked>
                   <span></span>
-                  <span>Я согласен на обработку  персональных данных</span>
+                  <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
                 </label>
 
                 <button type="submit">Задать вопрос</button>
@@ -350,7 +351,7 @@
                 <textarea placeholder="Ваш вопрос" name="modal-question" id="modal-question"></textarea>
               </label>
             </div>
-            <label for="modal-personal-data" data-validate-type="checkbox">
+            <label for="modal-personal-data" data-validate-type="checkbox" data-required data-message-base="Поле обязательно к заполнению">
               <input type="checkbox" name="personal-data" id="modal-personal-data" required checked>
               <span></span>
               <span>Я согласен на обработку  персональных данных</span>

@@ -55,9 +55,13 @@
   }
 }
 
-.form input + span {
-  color: $color-torch-red;
-}
+// .form input + span {
+//   color: $color-torch-red;
+//   position: absolute;
+//   width: 100%;
+//   top: 95%;
+//   left: 0;
+// }
 
 .form textarea {
   min-height: 155px;
@@ -95,7 +99,7 @@
   font-family: $ff-roboto;
   font-weight: 700;
   font-size: 16px;
-  line-height: 10px;
+  line-height: 120%;
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -103,6 +107,7 @@
   background-color: $color-black-pearl;
   border-radius: 3px;
   border: none;
+  user-select: none;
   box-sizing: border-box;
   grid-area: 3 / 1 / 4 /2;
   cursor: pointer;
@@ -147,7 +152,7 @@
   content: "";
   position: absolute;
   top: 25%;
-  left: 0;
+  left: 11px;
   width: 15px;
   height: 15px;
   background-color: $color-transparent;
@@ -165,7 +170,7 @@
   content: "";
   position: absolute;
   top: 35%;
-  left: 1%;
+  left: 5%;
   width: 9px;
   height: 6px;
   background-image: url("../img/svg/ckeck-mark.svg");
@@ -174,7 +179,7 @@
 .form label input[type="checkbox"] ~ span:nth-of-type(2n) {
   display: inline-block;
   vertical-align: bottom;
-  padding-left: 33px;
+  padding-left: 37px;
   font-family: $ff-mono;
   font-size: 14px;
   line-height: 16px;
@@ -192,11 +197,23 @@
   }
 }
 
+.form label input[type="checkbox"]:hover + span::after,
+.form label input[type="checkbox"]:hover ~ span:nth-of-type(2n) {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
 // Попап
 
 .form--popap {
   grid-template-columns: 1fr;
   gap: 15px;
+}
+
+.form--popap label input[type="checkbox"]:checked + span::before {
+  content: "";
+  top: 40%;
+  left: 3px;
 }
 
 .form--popap button {

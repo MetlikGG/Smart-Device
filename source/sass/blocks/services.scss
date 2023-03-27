@@ -53,7 +53,7 @@
 .services__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 85px;
+  column-gap: 7%;
   row-gap: 30px;
 
   @include vp-1023 {
